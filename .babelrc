@@ -1,0 +1,40 @@
+// {
+//   "presets": [
+//     ["@babel/preset-env", {
+//       "modules": false,
+//       "corejs": 3,
+//       "useBuiltIns": "usage",
+//       "debug": true
+//     }],
+//     ["@babel/preset-react", {
+//       "development": false
+//     }]
+//   ],
+//   "plugins": [
+//     // 如果多个文件都需要helpers，会重复引用这些 helpers，会导致每一个模块都定义一份，代码冗余。所以 babel 提供了这个命令，用于生成一个包含了所有 helpers 的 js 文件，用于直接引用。然后再通过一个 plugin，去检测全局下是否存在这个模块，存在就不需要重新定义了。另外如果使用了 transform-runtime 就不需要了
+//     "@babel/plugin-external-helpers"
+//   ]
+// }
+
+{
+  "presets": [
+    ["@babel/preset-env", {
+      "modules": false
+    }],
+    ["@babel/preset-react", {
+      "development": false
+    }]
+  ],
+  "plugins": [
+    [
+      "@babel/plugin-transform-runtime",
+      {
+        "corejs": {
+          "version": 3,
+          "proposals": true
+        },
+        "useESModules": true
+      }
+    ]
+  ]
+}
