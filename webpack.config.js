@@ -23,7 +23,7 @@ module.exports = {
     rules: [
       // js/jsx loader 处理
       {
-        test: /\.jsx?$/,
+        test: /\.(t|j)sx?$/,
         include: [path.resolve(__dirname, 'src')],
         use: [
           {

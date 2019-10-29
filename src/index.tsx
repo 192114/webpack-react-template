@@ -18,3 +18,9 @@ console.log(ass)
 const isInclude = '343982147'.includes('1')
 
 console.log(isInclude)
+
+let str: string = 'sss'
+
+str = '2'
+
+console.log(str)
