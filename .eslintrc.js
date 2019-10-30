@@ -6,8 +6,9 @@ module.exports = {
     "es6": true,
     "commonjs": true,
   },
-  "plugins": [ "react", "jsx-a11y", "import" ],
+  "plugins": [ "react", "jsx-a11y", "import", "prettier" ],
   "rules": {
-    "semi": [ 0 ]
+    "semi": [ 0 ],
+    "prettier/prettier": "error"
   },
 }
