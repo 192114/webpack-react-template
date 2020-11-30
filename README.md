@@ -2,7 +2,7 @@
 
   ## 1. 安装webapck webpack-cli webpack-dev-server
   ```shell
-    npm i webapck webpack-cli webpack-dev-server -D
+    npm i webpack webpack-cli webpack-dev-server -D
   ```
 
   ## 2. 安装 @babel/core @babel/cli @babel/preset-env @babel/preset-react babel-loader
